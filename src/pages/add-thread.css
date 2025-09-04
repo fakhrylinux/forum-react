@@ -1,0 +1,66 @@
+.post-form {
+    padding: 1rem;
+    background-color: #242424;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #999;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #373737;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.categories-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.category-tag {
+    padding: 0.3rem 0.6rem;
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preview {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #373737;
+    border-radius: 8px;
+    min-height: 150px;
+    overflow-y: auto;
+}
+
+.create-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff6b35;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .post-form {
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+}
