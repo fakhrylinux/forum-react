@@ -1,3 +1,18 @@
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Add a hover effect for buttons */
+.btn:hover {
+    opacity: 0.8;
+}
+
 .back-button {
     width: 30px;
     height: 30px;
@@ -10,62 +25,22 @@
     margin-left: auto;
 }
 
-/* Post Content */
-.post-content {
-    padding: 1rem;
-}
-
-.post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.post-author {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.post-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.post-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.tag {
-    padding: 0.3rem 0.6rem;
-    background-color: #373737;
-    border-radius: 5px;
-}
-
-.post-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    color: #999;
-}
-
 /* Comments Section */
 .comments-section {
     margin-top: 2rem;
     border-top: 1px solid #373737;
     padding-top: 1rem;
+    padding-inline: 1rem;
 }
 
 .comment {
     display: flex;
     margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+.comment-text {
+    width: 100%;
 }
 
 .comment-author {
@@ -76,6 +51,36 @@
 
 .comment-text {
     margin-left: 0.5rem;
+}
+
+.comment-input {
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: #242424;
+}
+
+.comment-input__field {
+    background-color: #373737;
+    border-radius: 5px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color: white;
+}
+
+.comment-button {
+    display: block;
+    padding-block: .4rem;
+    padding-inline: .8rem;
+    background-color: #ff6b35;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Related Posts */
