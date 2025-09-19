@@ -1,4 +1,5 @@
 import api from "../../utils/api.js";
+import { hideLoading, showLoading } from "react-redux-loading-bar";
 
 const ActionType = {
   RECEIVE_THREAD_DETAIL: "RECEIVE_THREAD_DETAIL",
@@ -62,12 +63,15 @@ function addCommentActionCreator(comment) {
 
 function asyncReceiveThreadDetail(threadId) {
   return async (dispatch) => {
+    dispatch(showLoading());
     dispatch(clearThreadDetailActionCreator());
     try {
       const threadDetail = await api.getThreadDetail(threadId);
       dispatch(receiveThreadDetailActionCreator(threadDetail));
     } catch (error) {
       alert(error.message);
+    } finally {
+      dispatch(hideLoading());
     }
   };
 }
@@ -113,13 +117,15 @@ function asyncNeutralizeVoteThreadDetail() {
 
 function asyncAddComment(content) {
   return async (dispatch, getState) => {
+    dispatch(showLoading());
     const { threadDetail } = getState();
     try {
       const { comment } = await api.addComment(threadDetail.id, content);
-      console.log(`asyncAddComment: ${JSON.stringify(comment)}`);
       dispatch(addCommentActionCreator(comment));
     } catch (error) {
       alert(error.message);
+    } finally {
+      dispatch(hideLoading());
     }
   };
 }
