@@ -2,7 +2,7 @@ import { postedAt } from "../utils/index.js";
 import PropTypes from "prop-types";
 import UpVoteButton from "./UpVoteButton.jsx";
 import DownVoteButton from "./DownVoteButton.jsx";
-import { authUserShape } from "../types/index.js";
+import { authUserShape, ownerShape } from "../types/index.js";
 
 function ThreadDetail({
   id,
@@ -74,12 +74,6 @@ function ThreadDetail({
     </>
   );
 }
-
-const ownerShape = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-};
 
 const commentShape = {
   id: PropTypes.string.isRequired,

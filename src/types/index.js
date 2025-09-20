@@ -17,3 +17,9 @@ export const authUserShape = {
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
 };
+
+export const ownerShape = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+};

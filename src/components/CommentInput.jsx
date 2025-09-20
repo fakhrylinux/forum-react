@@ -1,4 +1,6 @@
 import useInput from "../hooks/useInput.js";
+import PropTypes from "prop-types";
+import { authUserShape } from "../types/index.js";
 
 function CommentInput({ authUser, addComment }) {
   const [content, onContentChange, setContent] = useInput("");
@@ -30,5 +32,10 @@ function CommentInput({ authUser, addComment }) {
     </form>
   );
 }
+
+CommentInput.propTypes = {
+  authUser: PropTypes.shape(authUserShape).isRequired,
+  addComment: PropTypes.func.isRequired,
+};
 
 export default CommentInput;

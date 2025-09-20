@@ -1,6 +1,8 @@
 import { postedAt } from "../utils/index.js";
 import UpVoteButton from "./UpVoteButton.jsx";
 import DownVoteButton from "./DownVoteButton.jsx";
+import PropTypes from "prop-types";
+import { ownerShape } from "../types/index.js";
 
 function CommentItem({ content, createdAt, owner, upVotesBy, downVotesBy }) {
   return (
@@ -18,21 +20,11 @@ function CommentItem({ content, createdAt, owner, upVotesBy, downVotesBy }) {
         <small>{postedAt(createdAt)}</small>
         <div className="comment-stats">
           <div className="comment-stats__item">
-            <UpVoteButton
-            // onUpVote={onUpVoteClickHandle}
-            // onNeutralVote={onNeutralVoteClickHandle}
-            // upVotesBy={upVotesBy}
-            // authUser={authUser}
-            />
+            <UpVoteButton />
             <h5>{upVotesBy.length}</h5>
           </div>
           <div className="comment-stats__item">
-            <DownVoteButton
-            // onDownVote={onDownVoteClickHandle}
-            // onNeutralVote={onNeutralVoteClickHandle}
-            // downVotesBy={downVotesBy}
-            // authUser={authUser}
-            />
+            <DownVoteButton />
             <h5>{downVotesBy.length}</h5>
           </div>
         </div>
@@ -40,5 +32,13 @@ function CommentItem({ content, createdAt, owner, upVotesBy, downVotesBy }) {
     </div>
   );
 }
+
+CommentItem.propTypes = {
+  content: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  owner: PropTypes.shape(ownerShape).isRequired,
+  upVotesBy: PropTypes.arrayOf(PropTypes.string),
+  downVotesBy: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default CommentItem;
