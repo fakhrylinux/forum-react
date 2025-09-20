@@ -1,20 +1,15 @@
-import {
-  MdForum,
-  MdOutlineAddComment,
-  MdOutlineInsertComment,
-  MdPerson2,
-} from "react-icons/md";
+import { MdOutlineInsertComment, MdOutlineLogout } from "react-icons/md";
 import { NavLink } from "react-router";
-import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
-function Navigation() {
-  const { authUser } = useSelector((states) => states);
+function Navigation({ authUser, signOut }) {
+  const { id, avatar, name } = authUser;
 
   return (
     <header className="header">
       <div className="header-logo">
         <NavLink to="/">
-          <h5>Knowledgechain</h5>
+          <h5>Temu Wicara</h5>
         </NavLink>
       </div>
       <div className="header-icons">
@@ -23,17 +18,29 @@ function Navigation() {
         </a>
         <div className="profile-icon" style={{ width: "2rem" }}>
           <img
-            src={authUser.avatar}
-            alt={authUser.name}
+            src={avatar}
+            alt={id}
+            title={name}
             style={{ borderRadius: "50%" }}
           />
-          <div className="profile-logout">
-            <a href="/logout">Logout</a>
-          </div>
         </div>
+        <button type="button" onClick={signOut}>
+          <MdOutlineLogout />
+        </button>
       </div>
     </header>
   );
 }
+
+const authUserShape = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+};
+
+Navigation.propTypes = {
+  authUser: PropTypes.shape(authUserShape).isRequired,
+  signOut: PropTypes.func.isRequired,
+};
 
 export default Navigation;

@@ -22,10 +22,6 @@ function App() {
     dispatch(asyncPreloadProcess());
   }, [dispatch]);
 
-  const onSignOut = () => {
-    dispatch(asyncUnsetAuthUser());
-  };
-
   if (isPreload) {
     return null;
   }
