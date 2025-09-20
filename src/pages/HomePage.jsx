@@ -24,7 +24,7 @@ function HomePage() {
   const threadList = threads.map((thread) => ({
     ...thread,
     user: users.find((user) => user.id === thread.ownerId),
-    authUser: authUser.id,
+    authUser: authUser,
   }));
 
   const onUpVote = (id) => {
@@ -41,14 +41,12 @@ function HomePage() {
 
   return (
     <>
-      <div className="main-content">
-        <ThreadList
-          threads={threadList}
-          upVote={onUpVote}
-          downVote={onDownVote}
-          neutralVote={onNeutralVote}
-        />
-      </div>
+      <ThreadList
+        threads={threadList}
+        upVote={onUpVote}
+        downVote={onDownVote}
+        neutralVote={onNeutralVote}
+      />
     </>
   );
 }

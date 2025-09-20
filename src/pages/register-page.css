@@ -20,22 +20,6 @@ hr {
     margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
-.btn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
-
-.btn:hover {
-    opacity:1;
-}
-
 /* Extra styles for the cancel button */
 .cancelbtn {
     padding: 14px 20px;
@@ -51,6 +35,9 @@ hr {
 /* Add padding to container elements */
 .container {
     padding: 16px;
+    h1 {
+        color: #ffffff;
+    }
 }
 
 /* Clear floats */

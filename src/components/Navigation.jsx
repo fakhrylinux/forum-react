@@ -1,6 +1,7 @@
 import { MdOutlineInsertComment, MdOutlineLogout } from "react-icons/md";
 import { NavLink } from "react-router";
 import PropTypes from "prop-types";
+import { authUserShape } from "../types/index.js";
 
 function Navigation({ authUser, signOut }) {
   const { id, avatar, name } = authUser;
@@ -14,29 +15,20 @@ function Navigation({ authUser, signOut }) {
       </div>
       <div className="header-icons">
         <a href="/new">
-          <MdOutlineInsertComment size="2rem" style={{ color: "white" }} />
+          <MdOutlineInsertComment
+            style={{ fontSize: "2rem", color: "#ff6b35" }}
+          />
         </a>
         <div className="profile-icon" style={{ width: "2rem" }}>
-          <img
-            src={avatar}
-            alt={id}
-            title={name}
-            style={{ borderRadius: "50%" }}
-          />
+          <img src={avatar} alt={id} title={name} className="avatar" />
         </div>
-        <button type="button" onClick={signOut}>
-          <MdOutlineLogout />
+        <button className="icon-btn" type="button" onClick={signOut}>
+          <MdOutlineLogout style={{ fontSize: "2rem" }} />
         </button>
       </div>
     </header>
   );
 }
-
-const authUserShape = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
-};
 
 Navigation.propTypes = {
   authUser: PropTypes.shape(authUserShape).isRequired,

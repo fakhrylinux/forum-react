@@ -10,10 +10,9 @@ function RegisterInput({ register }) {
   const handleClick = () => register({ name, email, password });
 
   return (
-    <form style={{ border: "1px solid #ccc" }}>
+    <form>
       <div className="container">
         <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
         <hr />
 
         <label htmlFor="email">
@@ -54,7 +53,11 @@ function RegisterInput({ register }) {
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <div className="clearfix">
-          <button type="button" className="btn signupbtn" onClick={handleClick}>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={handleClick}
+          >
             Register
           </button>
         </div>

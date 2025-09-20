@@ -2,6 +2,7 @@ import { postedAt } from "../utils/index.js";
 import PropTypes from "prop-types";
 import UpVoteButton from "./UpVoteButton.jsx";
 import DownVoteButton from "./DownVoteButton.jsx";
+import { authUserShape } from "../types/index.js";
 
 function ThreadDetail({
   id,
@@ -12,7 +13,6 @@ function ThreadDetail({
   owner,
   upVotesBy,
   downVotesBy,
-  comments,
   authUser,
   upVote,
   downVote,
@@ -37,33 +37,39 @@ function ThreadDetail({
     <>
       <div className="post-header">
         <div className="post-author">
-          <img src={owner.avatar} alt="Author" className="post-author-image" />
-          <div>
-            <h3>{title}</h3>
-            <small>{postedAt(createdAt)}</small>
-          </div>
+          <img src={owner.avatar} alt="Author" className="avatar" />
+        </div>
+        <div>
+          <h3>{title}</h3>
+          <small>{postedAt(createdAt)}</small>
         </div>
       </div>
       <div className="post-tags">
         <span className="tag">{category}</span>
       </div>
-      <p>{body}</p>
+      <div className="post-content">
+        <p>{body}</p>
+      </div>
 
       <div className="post-stats">
-        <UpVoteButton
-          onUpVote={onUpVoteClickHandle}
-          onNeutralVote={onNeutralVoteClickHandle}
-          upVotesBy={upVotesBy}
-          authUser={authUser}
-        />
-        <h5>{upVotesBy.length}</h5>
-        <DownVoteButton
-          onDownVote={onDownVoteClickHandle}
-          onNeutralVote={onNeutralVoteClickHandle}
-          downVotesBy={downVotesBy}
-          authUser={authUser}
-        />
-        <h5>{downVotesBy.length}</h5>
+        <div className="post-stats__item">
+          <UpVoteButton
+            onUpVote={onUpVoteClickHandle}
+            onNeutralVote={onNeutralVoteClickHandle}
+            upVotesBy={upVotesBy}
+            authUser={authUser.id}
+          />
+          <h5>{upVotesBy.length}</h5>
+        </div>
+        <div className="post-stats__item">
+          <DownVoteButton
+            onDownVote={onDownVoteClickHandle}
+            onNeutralVote={onNeutralVoteClickHandle}
+            downVotesBy={downVotesBy}
+            authUser={authUser.id}
+          />
+          <h5>{downVotesBy.length}</h5>
+        </div>
       </div>
     </>
   );
@@ -93,8 +99,8 @@ ThreadDetail.propTypes = {
   owner: PropTypes.shape(ownerShape).isRequired,
   upVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
   downVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
-  comments: PropTypes.arrayOf(commentShape).isRequired,
-  authUser: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.shape(commentShape)).isRequired,
+  authUser: PropTypes.shape(authUserShape).isRequired,
   upVote: PropTypes.func.isRequired,
   downVote: PropTypes.func.isRequired,
   neutralVote: PropTypes.func.isRequired,

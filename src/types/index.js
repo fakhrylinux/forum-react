@@ -11,3 +11,9 @@ export const threadItemShape = {
   totalComments: PropTypes.number.isRequired,
   authUser: PropTypes.string.isRequired,
 };
+
+export const authUserShape = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+};

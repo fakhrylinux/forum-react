@@ -1,15 +1,10 @@
 import { postedAt } from "../utils/index.js";
+import UpVoteButton from "./UpVoteButton.jsx";
+import DownVoteButton from "./DownVoteButton.jsx";
 
-function CommentItem({
-  id,
-  content,
-  createdAt,
-  owner,
-  upVotesBy,
-  downVotesBy,
-}) {
+function CommentItem({ content, createdAt, owner, upVotesBy, downVotesBy }) {
   return (
-    <div className="comment">
+    <div className="comment-card">
       <div className="avatar">
         <img
           src={owner.avatar}
@@ -20,9 +15,27 @@ function CommentItem({
       </div>
       <div className="comment-text">
         <p>{content}</p>
-        <h5>{postedAt(createdAt)}</h5>
-        <h5>{upVotesBy.length} upvote</h5>
-        <h5>{downVotesBy.length} down vote</h5>
+        <small>{postedAt(createdAt)}</small>
+        <div className="comment-stats">
+          <div className="comment-stats__item">
+            <UpVoteButton
+            // onUpVote={onUpVoteClickHandle}
+            // onNeutralVote={onNeutralVoteClickHandle}
+            // upVotesBy={upVotesBy}
+            // authUser={authUser}
+            />
+            <h5>{upVotesBy.length}</h5>
+          </div>
+          <div className="comment-stats__item">
+            <DownVoteButton
+            // onDownVote={onDownVoteClickHandle}
+            // onNeutralVote={onNeutralVoteClickHandle}
+            // downVotesBy={downVotesBy}
+            // authUser={authUser}
+            />
+            <h5>{downVotesBy.length}</h5>
+          </div>
+        </div>
       </div>
     </div>
   );

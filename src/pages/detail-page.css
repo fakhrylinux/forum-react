@@ -1,3 +1,48 @@
+.post-header {
+    padding-block: .6rem;
+    display: flex;
+    gap: .5rem;
+    h3 {
+        color: #ffffff;
+        font-size: .8rem;
+    }
+    small {
+        color: #C5D0E6;
+    }
+}
+
+.post-author {
+    min-width: 20%;
+    /*!*width: 3rem;*!*/
+    /*flex-basis: 8rem;*/
+}
+
+.post-tags {
+    padding-block: .5rem;
+}
+
+.post-content {
+    padding-block: .5rem;
+    p {
+        color: #ffffff;
+    }
+}
+
+.post-stats {
+    display: flex;
+    gap: .5rem;
+    color: #999999;
+}
+
+.post-stats__item {
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    h5 {
+        font-size: .8rem;
+    }
+}
+
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
@@ -30,10 +75,12 @@ input[type=text], input[type=password] {
     margin-top: 2rem;
     border-top: 1px solid #373737;
     padding-top: 1rem;
-    padding-inline: 1rem;
+    h4 {
+        color: #ffffff;
+    }
 }
 
-.comment {
+.comment-card {
     display: flex;
     margin-bottom: 1rem;
     padding: .5rem;
@@ -41,6 +88,12 @@ input[type=text], input[type=password] {
 
 .comment-text {
     width: 100%;
+    p {
+        color: #ffffff;
+    }
+    small {
+        color: #C5D0E6;
+    }
 }
 
 .comment-author {
@@ -54,22 +107,25 @@ input[type=text], input[type=password] {
 }
 
 .comment-input {
-    padding: 1.25rem;
+    padding-inline: .5rem;
+    padding-block: .5rem;
     display: flex;
     align-items: center;
     gap: .5rem;
     background-color: #242424;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .comment-input__field {
     background-color: #373737;
     border-radius: 5px;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
     display: inline-block;
     box-sizing: border-box;
     color: white;
+    font-size: .75rem;
+    padding-block: .45rem;
 }
 
 .comment-button {
@@ -81,30 +137,23 @@ input[type=text], input[type=password] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: .75rem;
 }
 
-/* Related Posts */
-.related-posts {
-    margin-top: 2rem;
-    border-top: 1px solid #373737;
-    padding-top: 1rem;
-}
-
-.related-post {
+.comment-stats {
+    margin-top: .5rem;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: #2d2d2d;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
+    gap: .5rem;
+    color: #999999;
 }
 
-.related-post-image {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
+.comment-stats__item {
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    h5 {
+        font-size: .8rem ;
+    }
 }
 
 /* Responsive Design */

@@ -6,7 +6,6 @@ import AddThread from "./pages/AddThread.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { asyncPreloadProcess } from "./states/isPreload/action.js";
-import { asyncUnsetAuthUser } from "./states/authUser/action.js";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import Loading from "./components/Loading.jsx";

@@ -34,7 +34,7 @@ function LoginInput({ login }) {
           required
         />
 
-        <button className="btn" type="button" onClick={handleClick}>
+        <button className="btn btn-primary" type="button" onClick={handleClick}>
           Login
         </button>
       </div>

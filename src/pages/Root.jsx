@@ -17,7 +17,9 @@ function Root() {
       <Navigation authUser={authUser} signOut={onSignOut} />
       <Loading />
       <main>
-        <Outlet />
+        <div className="main-content">
+          <Outlet />
+        </div>
       </main>
     </>
   );

@@ -8,21 +8,21 @@ function DownVoteButton({
   authUser,
 }) {
   return downVotesBy.includes(authUser) ? (
-    <button type="button" onClick={onNeutralVote}>
-      <BiSolidDownvote />
+    <button className="icon-btn" type="button" onClick={onNeutralVote}>
+      <BiSolidDownvote style={{ fontSize: "1.1rem" }} />
     </button>
   ) : (
-    <button type="button" onClick={onDownVote}>
-      <BiDownvote />
+    <button className="icon-btn" type="button" onClick={onDownVote}>
+      <BiDownvote style={{ fontSize: "1.1rem" }} />
     </button>
   );
 }
 
 DownVoteButton.propTypes = {
-  onDownVote: PropTypes.func.isRequired,
-  onNeutralVote: PropTypes.func.isRequired,
-  downVotesBy: PropTypes.array,
-  authUser: PropTypes.string.isRequired,
+  onDownVote: PropTypes.func,
+  onNeutralVote: PropTypes.func,
+  downVotesBy: PropTypes.arrayOf(PropTypes.string),
+  authUser: PropTypes.string,
 };
 
 export default DownVoteButton;

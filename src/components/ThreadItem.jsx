@@ -9,17 +9,14 @@ import { threadItemShape } from "../types/index.js";
 function ThreadItem({
   id,
   title,
-  body,
   category,
   createdAt,
-  ownerId,
   upVotesBy = [],
   downVotesBy = [],
   totalComments = 0,
-  user,
   authUser,
-  upVote = null,
-  downVote = null,
+  upVote,
+  downVote,
   neutralVote = null,
 }) {
   const onUpVoteClick = (event) => {
@@ -46,36 +43,49 @@ function ThreadItem({
           </Link>
         </div>
       </div>
-      <div>
-        <h5>posted at: {postedAt(createdAt)}</h5>
-      </div>
 
       <div className="content-card-tags">
         <span className="tag">{category}</span>
       </div>
-      <div className="content-card__body">
-        <p className="content-card__body">{body}</p>
-      </div>
 
-      <div className="content-card-stats">
-        <UpVoteButton
-          onUpVote={onUpVoteClick}
-          onNeutralVote={onNeutralVoteClick}
-          upVotesBy={upVotesBy}
-          authUser={authUser}
-        />
-        <h5>{upVotesBy.length}</h5>
-        <DownVoteButton
-          onDownVote={onDownvoteClick}
-          onNeutralVote={onNeutralVoteClick}
-          downVotesBy={downVotesBy}
-          authUser={authUser}
-        />
-        <h5>{downVotesBy.length}</h5>
-        <button>
-          <BiComment />
-        </button>
-        <div>{totalComments}</div>
+      <div className="footer-card">
+        <div className="footer-card__left">
+          <div style={{ width: "2.2rem" }}>
+            <img src={authUser.avatar} alt={authUser.id} className="avatar" />
+          </div>
+
+          <div>
+            <h5>{authUser.name}</h5>
+            <h6>{postedAt(createdAt)}</h6>
+          </div>
+        </div>
+        <div className="content-card-stats">
+          <div className="content-card-stats__item">
+            <UpVoteButton
+              onUpVote={onUpVoteClick}
+              onNeutralVote={onNeutralVoteClick}
+              upVotesBy={upVotesBy}
+              authUser={authUser.id}
+            />
+            <h5>{upVotesBy.length}</h5>
+          </div>
+
+          <div className="content-card-stats__item">
+            <DownVoteButton
+              onDownVote={onDownvoteClick}
+              onNeutralVote={onNeutralVoteClick}
+              downVotesBy={downVotesBy}
+              authUser={authUser.id}
+            />
+            <h5>{downVotesBy.length}</h5>
+          </div>
+          <div className="content-card-stats__item">
+            <button type="button" className="icon-btn">
+              <BiComment style={{ fontSize: "1.1rem" }} />
+            </button>
+            <h5>{totalComments}</h5>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -35,8 +35,6 @@ function DetailPage() {
   };
 
   const onAddComment = (content) => {
-    // console.log(threadId);
-    // console.log(content);
     dispatch(asyncAddComment(content));
   };
 
@@ -45,10 +43,10 @@ function DetailPage() {
   }
 
   return (
-    <div className="post-content">
+    <div className="content-card">
       <ThreadDetail
         {...threadDetail}
-        authUser={authUser.id}
+        authUser={authUser}
         upVote={onUpVote}
         downVote={downVote}
         neutralVote={onNeutralVote}
@@ -61,7 +59,6 @@ function DetailPage() {
           addComment={onAddComment}
         />
         <h4>Comments ({threadDetail.comments.length})</h4>
-        <pre>{JSON.stringify(threadDetail.comments)}</pre>
         {threadDetail.comments.map((comment) => (
           <CommentItem key={comment.id} {...comment} />
         ))}
