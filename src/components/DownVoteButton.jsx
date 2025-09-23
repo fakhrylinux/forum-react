@@ -1,5 +1,5 @@
-import { BiDownvote, BiSolidDownvote } from "react-icons/bi";
-import PropTypes from "prop-types";
+import { BiDownvote, BiSolidDownvote } from 'react-icons/bi';
+import PropTypes from 'prop-types';
 
 function DownVoteButton({
   onDownVote,
@@ -9,11 +9,11 @@ function DownVoteButton({
 }) {
   return downVotesBy.includes(authUser) ? (
     <button className="icon-btn" type="button" onClick={onNeutralVote}>
-      <BiSolidDownvote style={{ fontSize: "1.1rem" }} />
+      <BiSolidDownvote style={{ fontSize: '1.1rem' }} />
     </button>
   ) : (
     <button className="icon-btn" type="button" onClick={onDownVote}>
-      <BiDownvote style={{ fontSize: "1.1rem" }} />
+      <BiDownvote style={{ fontSize: '1.1rem' }} />
     </button>
   );
 }

@@ -1,14 +1,14 @@
-import useInput from "../hooks/useInput.js";
-import PropTypes from "prop-types";
-import { authUserShape } from "../types/index.js";
+import useInput from '../hooks/useInput.js';
+import PropTypes from 'prop-types';
+import { authUserShape } from '../types/index.js';
 
 function CommentInput({ authUser, addComment }) {
-  const [content, onContentChange, setContent] = useInput("");
+  const [content, onContentChange, setContent] = useInput('');
 
   const onAddComment = () => {
     if (content.trim()) {
       addComment(content);
-      setContent("");
+      setContent('');
     }
   };
 
@@ -18,7 +18,7 @@ function CommentInput({ authUser, addComment }) {
         <img
           src={authUser.avatar}
           alt={authUser.name}
-          style={{ borderRadius: "50%" }}
+          style={{ borderRadius: '50%' }}
         />
       </div>
       <input

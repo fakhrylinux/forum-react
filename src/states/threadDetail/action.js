@@ -1,13 +1,13 @@
-import api from "../../utils/api.js";
-import { hideLoading, showLoading } from "react-redux-loading-bar";
+import api from '../../utils/api.js';
+import { hideLoading, showLoading } from 'react-redux-loading-bar';
 
 const ActionType = {
-  RECEIVE_THREAD_DETAIL: "RECEIVE_THREAD_DETAIL",
-  CLEAR_THREAD_DETAIL: "CLEAR_THREAD_DETAIL",
-  UPVOTE_THREAD_DETAIL: "UPVOTE_THREAD_DETAIL",
-  DOWNVOTE_THREAD_DETAIL: "DOWNVOTE_THREAD_DETAIL",
-  NEUTRALIZE_VOTE_THREAD_DETAIL: "NEUTRALIZE_VOTE_THREAD_DETAIL",
-  ADD_COMMENT: "ADD_COMMENT",
+  RECEIVE_THREAD_DETAIL: 'RECEIVE_THREAD_DETAIL',
+  CLEAR_THREAD_DETAIL: 'CLEAR_THREAD_DETAIL',
+  UPVOTE_THREAD_DETAIL: 'UPVOTE_THREAD_DETAIL',
+  DOWNVOTE_THREAD_DETAIL: 'DOWNVOTE_THREAD_DETAIL',
+  NEUTRALIZE_VOTE_THREAD_DETAIL: 'NEUTRALIZE_VOTE_THREAD_DETAIL',
+  ADD_COMMENT: 'ADD_COMMENT',
 };
 
 function receiveThreadDetailActionCreator(threadDetail) {

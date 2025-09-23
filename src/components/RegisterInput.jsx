@@ -1,10 +1,10 @@
-import useInput from "../hooks/useInput.js";
-import PropTypes from "prop-types";
-import usePasswordValidation from "../hooks/usePasswordValidation.js";
+import useInput from '../hooks/useInput.js';
+import PropTypes from 'prop-types';
+import usePasswordValidation from '../hooks/usePasswordValidation.js';
 
 function RegisterInput({ register }) {
-  const [name, onNameChange] = useInput("");
-  const [email, onEmailChange] = useInput("");
+  const [name, onNameChange] = useInput('');
+  const [email, onEmailChange] = useInput('');
   const [password, error, validate] = usePasswordValidation();
 
   const handleClick = () => register({ name, email, password });
@@ -47,7 +47,7 @@ function RegisterInput({ register }) {
           onChange={(e) => validate(e.target.value)}
           required
         />
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
 
         <div className="clearfix">
           <button

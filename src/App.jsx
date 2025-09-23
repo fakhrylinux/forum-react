@@ -1,14 +1,14 @@
-import HomePage from "./pages/HomePage.jsx";
-import { Route, Routes } from "react-router";
-import Root from "./pages/Root.jsx";
-import DetailPage from "./pages/DetailPage.jsx";
-import AddThread from "./pages/AddThread.jsx";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { asyncPreloadProcess } from "./states/isPreload/action.js";
-import LoginPage from "./pages/LoginPage.jsx";
-import RegisterPage from "./pages/RegisterPage.jsx";
-import Loading from "./components/Loading.jsx";
+import HomePage from './pages/HomePage.jsx';
+import { Route, Routes } from 'react-router';
+import Root from './pages/Root.jsx';
+import DetailPage from './pages/DetailPage.jsx';
+import AddThread from './pages/AddThread.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { asyncPreloadProcess } from './states/isPreload/action.js';
+import LoginPage from './pages/LoginPage.jsx';
+import RegisterPage from './pages/RegisterPage.jsx';
+import Loading from './components/Loading.jsx';
 
 function App() {
   const { authUser = null, isPreload = false } = useSelector(

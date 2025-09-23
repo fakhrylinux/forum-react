@@ -1,17 +1,17 @@
-import "./detail-page.css";
-import { useParams } from "react-router";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import './detail-page.css';
+import { useParams } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import {
   asyncAddComment,
   asyncDownVoteThreadDetail,
   asyncNeutralizeVoteThreadDetail,
   asyncReceiveThreadDetail,
   asyncUpVoteThreadDetail,
-} from "../states/threadDetail/action.js";
-import CommentItem from "../components/CommentItem.jsx";
-import ThreadDetail from "../components/ThreadDetail.jsx";
-import CommentInput from "../components/CommentInput.jsx";
+} from '../states/threadDetail/action.js';
+import CommentItem from '../components/CommentItem.jsx';
+import ThreadDetail from '../components/ThreadDetail.jsx';
+import CommentInput from '../components/CommentInput.jsx';
 
 function DetailPage() {
   const { id } = useParams();

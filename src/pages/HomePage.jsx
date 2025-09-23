@@ -1,12 +1,12 @@
-import ThreadList from "../components/ThreadList.jsx";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { asyncPopulateUsersAndThreads } from "../states/shared/action.js";
+import ThreadList from '../components/ThreadList.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { asyncPopulateUsersAndThreads } from '../states/shared/action.js';
 import {
   asyncDownVoteThread,
   asyncNeutralizeThread,
   asyncUpVoteThread,
-} from "../states/threads/action.js";
+} from '../states/threads/action.js';
 
 function HomePage() {
   const {

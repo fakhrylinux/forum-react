@@ -1,7 +1,7 @@
-import api from "../../utils/api.js";
+import api from '../../utils/api.js';
 
 const ActionType = {
-  RECEIVE_USERS: "RECEIVE_USERS",
+  RECEIVE_USERS: 'RECEIVE_USERS',
 };
 
 function receiveUsersActionCreator(users) {

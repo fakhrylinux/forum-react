@@ -1,20 +1,20 @@
-import "./add-thread.css";
-import { useDispatch } from "react-redux";
-import { asyncAddThread } from "../states/threads/action.js";
-import useInput from "../hooks/useInput.js";
-import { useNavigate } from "react-router";
+import './add-thread.css';
+import { useDispatch } from 'react-redux';
+import { asyncAddThread } from '../states/threads/action.js';
+import useInput from '../hooks/useInput.js';
+import { useNavigate } from 'react-router';
 
 function AddThread() {
-  const [title, onTitleChange] = useInput("");
-  const [body, onBodyChange] = useInput("");
-  const [category, onCategoryChange] = useInput("");
+  const [title, onTitleChange] = useInput('');
+  const [body, onBodyChange] = useInput('');
+  const [category, onCategoryChange] = useInput('');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const onAddThread = () => {
     dispatch(asyncAddThread({ title, body, category }));
-    navigate("/");
+    navigate('/');
   };
 
   return (

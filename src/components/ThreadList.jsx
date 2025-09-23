@@ -1,6 +1,6 @@
-import ThreadItem from "./ThreadItem.jsx";
-import PropTypes from "prop-types";
-import { threadItemShape } from "../types/index.js";
+import ThreadItem from './ThreadItem.jsx';
+import PropTypes from 'prop-types';
+import { threadItemShape } from '../types/index.js';
 
 function ThreadList({ threads, upVote, downVote, neutralVote }) {
   return (

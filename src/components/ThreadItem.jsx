@@ -1,10 +1,10 @@
-import { BiComment } from "react-icons/bi";
-import { postedAt } from "../utils/index.js";
-import { Link } from "react-router";
-import UpVoteButton from "./UpVoteButton.jsx";
-import DownVoteButton from "./DownVoteButton.jsx";
-import PropTypes from "prop-types";
-import { threadItemShape } from "../types/index.js";
+import { BiComment } from 'react-icons/bi';
+import { postedAt } from '../utils/index.js';
+import { Link } from 'react-router';
+import UpVoteButton from './UpVoteButton.jsx';
+import DownVoteButton from './DownVoteButton.jsx';
+import PropTypes from 'prop-types';
+import { threadItemShape } from '../types/index.js';
 
 function ThreadItem({
   id,
@@ -51,7 +51,7 @@ function ThreadItem({
 
       <div className="footer-card">
         <div className="footer-card__left">
-          <div style={{ width: "2.2rem" }}>
+          <div style={{ width: '2.2rem' }}>
             <img src={authUser.avatar} alt={authUser.id} className="avatar" />
           </div>
 
@@ -82,7 +82,7 @@ function ThreadItem({
           </div>
           <div className="content-card-stats__item">
             <button type="button" className="icon-btn">
-              <BiComment style={{ fontSize: "1.1rem" }} />
+              <BiComment style={{ fontSize: '1.1rem' }} />
             </button>
             <h5>{totalComments}</h5>
           </div>

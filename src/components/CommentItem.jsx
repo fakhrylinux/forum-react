@@ -1,8 +1,8 @@
-import { postedAt } from "../utils/index.js";
-import UpVoteButton from "./UpVoteButton.jsx";
-import DownVoteButton from "./DownVoteButton.jsx";
-import PropTypes from "prop-types";
-import { ownerShape } from "../types/index.js";
+import { postedAt } from '../utils/index.js';
+import UpVoteButton from './UpVoteButton.jsx';
+import DownVoteButton from './DownVoteButton.jsx';
+import PropTypes from 'prop-types';
+import { ownerShape } from '../types/index.js';
 
 function CommentItem({ content, createdAt, owner, upVotesBy, downVotesBy }) {
   return (
@@ -12,7 +12,7 @@ function CommentItem({ content, createdAt, owner, upVotesBy, downVotesBy }) {
           src={owner.avatar}
           alt={owner.name}
           className="comment-author-image"
-          style={{ borderRadius: "50%" }}
+          style={{ borderRadius: '50%' }}
         />
       </div>
       <div className="comment-text">

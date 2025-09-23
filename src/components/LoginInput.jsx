@@ -1,9 +1,9 @@
-import useInput from "../hooks/useInput.js";
-import PropTypes from "prop-types";
+import useInput from '../hooks/useInput.js';
+import PropTypes from 'prop-types';
 
 function LoginInput({ login }) {
-  const [email, onEmailChange] = useInput("");
-  const [password, onPasswordChange] = useInput("");
+  const [email, onEmailChange] = useInput('');
+  const [password, onPasswordChange] = useInput('');
 
   const handleClick = () => login({ email, password });
 

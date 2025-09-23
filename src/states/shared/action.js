@@ -1,7 +1,7 @@
-import api from "../../utils/api.js";
-import { receiveThreadsActionCreator } from "../threads/action.js";
-import { receiveUsersActionCreator } from "../users/action.js";
-import { hideLoading, showLoading } from "react-redux-loading-bar";
+import api from '../../utils/api.js';
+import { receiveThreadsActionCreator } from '../threads/action.js';
+import { receiveUsersActionCreator } from '../users/action.js';
+import { hideLoading, showLoading } from 'react-redux-loading-bar';
 
 function asyncPopulateUsersAndThreads() {
   return async (dispatch) => {

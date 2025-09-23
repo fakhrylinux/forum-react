@@ -1,11 +1,11 @@
-import api from "../../utils/api.js";
+import api from '../../utils/api.js';
 
 const ActionType = {
-  RECEIVE_THREADS: "RECEIVE_THREADS",
-  ADD_THREAD: "ADD_THREAD",
-  UPVOTE_THREAD: "UPVOTE_THREAD",
-  DOWNVOTE_THREAD: "DOWNVOTE_THREAD",
-  NEUTRALIZE_THREAD: "NEUTRALIZE_THREAD",
+  RECEIVE_THREADS: 'RECEIVE_THREADS',
+  ADD_THREAD: 'ADD_THREAD',
+  UPVOTE_THREAD: 'UPVOTE_THREAD',
+  DOWNVOTE_THREAD: 'DOWNVOTE_THREAD',
+  NEUTRALIZE_THREAD: 'NEUTRALIZE_THREAD',
 };
 
 function receiveThreadsActionCreator(threads) {
@@ -56,7 +56,7 @@ function neutralizeThreadActionCreator({ threadId, userId }) {
   };
 }
 
-function asyncAddThread({ title, body, category = "" }) {
+function asyncAddThread({ title, body, category = '' }) {
   return async (dispatch) => {
     try {
       const thread = await api.createThread({ title, body, category });
