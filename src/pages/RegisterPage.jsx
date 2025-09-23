@@ -16,9 +16,6 @@ function RegisterPage() {
   return (
     <>
       <RegisterInput register={onRegister} />
-      <p>
-        Have an account? <NavLink to="/login">Log in</NavLink>
-      </p>
     </>
   );
 }
