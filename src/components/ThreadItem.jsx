@@ -14,6 +14,7 @@ function ThreadItem({
   upVotesBy = [],
   downVotesBy = [],
   totalComments = 0,
+  user,
   authUser,
   upVote,
   downVote,
@@ -55,7 +56,7 @@ function ThreadItem({
           </div>
 
           <div>
-            <h5>{authUser.name}</h5>
+            <h5>{user.name}</h5>
             <h6>{postedAt(createdAt)}</h6>
           </div>
         </div>

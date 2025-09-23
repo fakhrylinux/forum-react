@@ -1,5 +1,22 @@
 body {
     background: #1E252B;
+    color: #999999;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #ff6b35;
+}
+
+a:hover {
+  color: #ff8935;
+}
+
+.main-auth {
+    padding-inline: 1rem;
 }
 
 .avatar {

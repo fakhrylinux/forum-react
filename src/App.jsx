@@ -29,7 +29,7 @@ function App() {
     return (
       <>
         <Loading />
-        <main>
+        <main className="main-auth">
           <Routes>
             <Route path="/*" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />

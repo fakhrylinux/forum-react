@@ -14,11 +14,11 @@ function Navigation({ authUser, signOut }) {
         </NavLink>
       </div>
       <div className="header-icons">
-        <a href="/new">
+        <NavLink to="/new">
           <MdOutlineInsertComment
             style={{ fontSize: "2rem", color: "#ff6b35" }}
           />
-        </a>
+        </NavLink>
         <div className="profile-icon" style={{ width: "2rem" }}>
           <img src={avatar} alt={id} title={name} className="avatar" />
         </div>

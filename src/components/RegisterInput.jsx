@@ -12,9 +12,6 @@ function RegisterInput({ register }) {
   return (
     <form>
       <div className="container">
-        <h1>Sign Up</h1>
-        <hr />
-
         <label htmlFor="email">
           <b>Name</b>
         </label>

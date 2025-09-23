@@ -5,15 +5,6 @@ import { threadItemShape } from "../types/index.js";
 function ThreadList({ threads, upVote, downVote, neutralVote }) {
   return (
     <>
-      <div>
-        <label htmlFor="cars">Category filter:</label>
-        <select name="cars" id="cars">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-      </div>
       <div className="content-grid">
         {threads.map((thread) => (
           <ThreadItem
