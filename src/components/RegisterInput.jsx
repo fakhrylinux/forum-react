@@ -11,53 +11,51 @@ function RegisterInput({ register }) {
 
   return (
     <form>
-      <div className="container">
-        <label htmlFor="email">
-          <b>Name</b>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Email"
-          name="email"
-          value={name}
-          onChange={onNameChange}
-          required
-        />
+      <label htmlFor="email">
+        <b>Name</b>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter Email"
+        name="email"
+        value={name}
+        onChange={onNameChange}
+        required
+      />
 
-        <label htmlFor="email">
-          <b>Email</b>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Email"
-          name="email"
-          value={email}
-          onChange={onEmailChange}
-          required
-        />
+      <label htmlFor="email">
+        <b>Email</b>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter Email"
+        name="email"
+        value={email}
+        onChange={onEmailChange}
+        required
+      />
 
-        <label htmlFor="psw">
-          <b>Password</b>
-        </label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="psw"
-          value={password}
-          onChange={(e) => validate(e.target.value)}
-          required
-        />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+      <label htmlFor="psw">
+        <b>Password</b>
+      </label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        name="psw"
+        value={password}
+        onChange={(e) => validate(e.target.value)}
+        required
+      />
+      {error && <p style={{ color: 'red' }}>{error}</p>}
 
-        <div className="clearfix">
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={handleClick}
-          >
+      <div className="clearfix">
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={handleClick}
+        >
             Register
-          </button>
-        </div>
+        </button>
       </div>
     </form>
   );

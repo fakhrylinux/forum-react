@@ -30,10 +30,12 @@ function App() {
       <>
         <Loading />
         <main className="main-auth">
-          <Routes>
-            <Route path="/*" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-          </Routes>
+          <div className="container">
+            <Routes>
+              <Route path="/*" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+            </Routes>
+          </div>
         </main>
       </>
     );

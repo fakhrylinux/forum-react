@@ -9,35 +9,33 @@ function LoginInput({ login }) {
 
   return (
     <form>
-      <div className="container">
-        <label htmlFor="email">
-          <b>Email</b>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Username"
-          id="email"
-          value={email}
-          onChange={onEmailChange}
-          required
-        />
+      <label htmlFor="email">
+        <b>Email</b>
+      </label>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        id="email"
+        value={email}
+        onChange={onEmailChange}
+        required
+      />
 
-        <label htmlFor="password">
-          <b>Password</b>
-        </label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          id="password"
-          value={password}
-          onChange={onPasswordChange}
-          required
-        />
+      <label htmlFor="password">
+        <b>Password</b>
+      </label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        id="password"
+        value={password}
+        onChange={onPasswordChange}
+        required
+      />
 
-        <button className="btn btn-primary" type="button" onClick={handleClick}>
+      <button className="btn btn-primary" type="button" onClick={handleClick}>
           Login
-        </button>
-      </div>
+      </button>
     </form>
   );
 }
