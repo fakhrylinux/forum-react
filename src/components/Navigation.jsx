@@ -12,7 +12,7 @@ function Navigation({ authUser, signOut }) {
     <header className="header">
       <div className="header-logo">
         <NavLink to="/">
-          <h2>Temu Wicara</h2>
+          <h5>Temu Wicara</h5>
         </NavLink>
       </div>
       <div className="header-icons">
