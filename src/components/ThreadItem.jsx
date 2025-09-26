@@ -5,6 +5,9 @@ import UpVoteButton from './UpVoteButton.jsx';
 import DownVoteButton from './DownVoteButton.jsx';
 import PropTypes from 'prop-types';
 import { threadItemShape } from '../types/index.js';
+import ContentCard from './styled/ContentCard.js';
+import IconButton from './styled/IconButton.js';
+import Avatar from './styled/Avatar.js';
 
 function ThreadItem({
   id,
@@ -36,7 +39,7 @@ function ThreadItem({
   };
 
   return (
-    <div className="content-card">
+    <ContentCard>
       <div className="content-card-header">
         <div>
           <Link to={`/${id}`}>
@@ -52,7 +55,7 @@ function ThreadItem({
       <div className="footer-card">
         <div className="footer-card__left">
           <div style={{ width: '2.2rem' }}>
-            <img src={authUser.avatar} alt={authUser.id} className="avatar" />
+            <Avatar src={authUser.avatar} alt={authUser.id} />
           </div>
 
           <div>
@@ -81,14 +84,14 @@ function ThreadItem({
             <h5>{downVotesBy.length}</h5>
           </div>
           <div className="content-card-stats__item">
-            <button type="button" className="icon-btn">
+            <IconButton type="button">
               <BiComment style={{ fontSize: '1.1rem' }} />
-            </button>
+            </IconButton>
             <h5>{totalComments}</h5>
           </div>
         </div>
       </div>
-    </div>
+    </ContentCard>
   );
 }
 
