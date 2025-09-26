@@ -19,18 +19,6 @@ a:hover {
   color: #ff8935;
 }
 
-.main-auth {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding-inline: 1rem;
-}
-
-.avatar {
-    border-radius: 50%;
-}
-
 .loading {
     position: sticky;
     top: 0;
@@ -108,14 +96,6 @@ a:hover {
     max-width: 720px;
     margin-inline: auto;
     padding: 1rem;
-}
-
-/* Content Cards */
-.content-card {
-    background-color: #262D34;
-    padding: .8rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
 }
 
 .content-card-header {
@@ -203,12 +183,6 @@ a:hover {
 .btn-primary {
     background-color: #ff6b35;
     color: #ffffff;
-}
-
-.icon-btn {
-    background: none;
-    border: none;
-    color: #ff6b35;
 }
 
 .vote-btn {

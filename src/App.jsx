@@ -9,6 +9,7 @@ import { asyncPreloadProcess } from './states/isPreload/action.js';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import Loading from './components/Loading.jsx';
+import MainAuth from './components/styled/MainAuth.js';
 
 function App() {
   const { authUser = null, isPreload = false } = useSelector(
@@ -29,14 +30,14 @@ function App() {
     return (
       <>
         <Loading />
-        <main className="main-auth">
+        <MainAuth>
           <div className="container">
             <Routes>
               <Route path="/*" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
             </Routes>
           </div>
-        </main>
+        </MainAuth>
       </>
     );
   }

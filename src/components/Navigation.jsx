@@ -2,6 +2,8 @@ import { MdOutlineInsertComment, MdOutlineLogout } from 'react-icons/md';
 import { NavLink } from 'react-router';
 import PropTypes from 'prop-types';
 import { authUserShape } from '../types/index.js';
+import IconButton from './styled/IconButton.js';
+import Avatar from './styled/Avatar.js';
 
 function Navigation({ authUser, signOut }) {
   const { id, avatar, name } = authUser;
@@ -20,11 +22,11 @@ function Navigation({ authUser, signOut }) {
           />
         </NavLink>
         <div className="profile-icon" style={{ width: '2rem' }}>
-          <img src={avatar} alt={id} title={name} className="avatar" />
+          <Avatar src={avatar} alt={id} title={name} />
         </div>
-        <button id="logout" className="icon-btn" type="button" onClick={signOut}>
+        <IconButton id="logout" type="button" onClick={signOut}>
           <MdOutlineLogout style={{ fontSize: '2rem' }} />
-        </button>
+        </IconButton>
       </div>
     </header>
   );
