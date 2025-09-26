@@ -39,7 +39,6 @@ function threadDetailReducer(threadDetail = null, action = {}) {
       ),
     };
   case ActionType.ADD_COMMENT:
-    console.log(`threadDetail reducer: ${JSON.stringify(threadDetail)}`);
     return {
       ...threadDetail,
       comments: threadDetail.comments.concat(action.payload.comment),

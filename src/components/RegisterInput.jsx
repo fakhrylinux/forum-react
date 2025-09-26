@@ -11,13 +11,14 @@ function RegisterInput({ register }) {
 
   return (
     <form>
-      <label htmlFor="email">
+      <label htmlFor="name">
         <b>Name</b>
       </label>
       <input
+        id="name"
         type="text"
-        placeholder="Enter Email"
-        name="email"
+        placeholder="Enter Name"
+        name="name"
         value={name}
         onChange={onNameChange}
         required
@@ -27,6 +28,7 @@ function RegisterInput({ register }) {
         <b>Email</b>
       </label>
       <input
+        id="email"
         type="text"
         placeholder="Enter Email"
         name="email"
@@ -39,6 +41,7 @@ function RegisterInput({ register }) {
         <b>Password</b>
       </label>
       <input
+        id="psw"
         type="password"
         placeholder="Enter Password"
         name="psw"

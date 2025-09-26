@@ -81,7 +81,7 @@ const api = (() => {
     const { status, message } = responseJson;
 
     if (status !== 'success') {
-      throw new Error(message);
+      throw new Error(`getOwnProfile: ${message}`);
     }
 
     const {
@@ -231,8 +231,6 @@ const api = (() => {
   }
 
   async function addComment(threadId, content) {
-    console.log(`api: ${threadId}`);
-    console.log(`api: ${JSON.stringify(content)}`);
     const response = await _fetchWithAuth(
       `${BASE_URL}/threads/${threadId}/comments`,
       {

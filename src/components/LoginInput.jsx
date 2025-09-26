@@ -14,7 +14,7 @@ function LoginInput({ login }) {
       </label>
       <input
         type="text"
-        placeholder="Enter Username"
+        placeholder="Enter Email"
         id="email"
         value={email}
         onChange={onEmailChange}

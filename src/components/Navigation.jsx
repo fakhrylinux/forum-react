@@ -22,7 +22,7 @@ function Navigation({ authUser, signOut }) {
         <div className="profile-icon" style={{ width: '2rem' }}>
           <img src={avatar} alt={id} title={name} className="avatar" />
         </div>
-        <button className="icon-btn" type="button" onClick={signOut}>
+        <button id="logout" className="icon-btn" type="button" onClick={signOut}>
           <MdOutlineLogout style={{ fontSize: '2rem' }} />
         </button>
       </div>
