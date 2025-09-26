@@ -1,6 +1,18 @@
 import { describe, it, expect } from 'vitest';
 import threadsReducer from './reducer.js';
 
+/**
+ * test scenario for threadsReducer
+ *
+ * - threadsReducer function
+ *   - should return the initial state when given by unknown action
+ *   - should return the threads when given by RECEIVE_THREADS action
+ *   - should return the threads with the new thread when given by ADD_THREAD action
+ *   - should return the threads with upvoted thread when given by UPVOTE_THREAD action
+ *   - should return the threads with downvoted thread when given by DOWNVOTE_THREAD action
+ *   - should return the threads with neutralize thread when given by NEUTRALIZE_THREAD action
+ */
+
 describe('threadsReducer', () => {
   it('should return the initial state when given by unknown action', () => {
     // arrange

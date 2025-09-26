@@ -5,6 +5,16 @@ import { userEvent } from '@testing-library/user-event';
 import matchers from '@testing-library/jest-dom/matchers';
 import RegisterInput from './RegisterInput.jsx';
 
+/**
+ * testing scenario
+ *
+ * - RegisterInputComponent
+ *   - should handle name typing correctly
+ *   - should handle email typing correctly
+ *   - should handle password typing correctly
+ *   - should call register function when button is clicked
+ */
+
 expect.extend(matchers);
 
 describe('RegisterInput component', () => {

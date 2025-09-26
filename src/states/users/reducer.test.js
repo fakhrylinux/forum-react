@@ -1,6 +1,14 @@
 import { describe, it, expect } from 'vitest';
 import usersReducer from './reducer.js';
 
+/**
+ * test scenario for usersReducer
+ *
+ * - usersReducer
+ *   - should return the initial state when given by  unknown action
+ *   - should return users when given by RECEIVE_USERS action
+ */
+
 describe('usersReducer', () => {
   it('should return the initial state when given by  unknown action', ()=> {
     // arrange

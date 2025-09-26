@@ -9,7 +9,8 @@ import { receiveUsersActionCreator } from '../users/action.js';
  * test scenario
  *
  * - asyncPopulateUsersAndThreads thunk
- *   - should dispatch
+ *   - should dispatch action correctly when data fetching success
+ *   - should dispatch action and call alert correctly when data fetching failed
  */
 
 const fakeThreadsResponse = [
